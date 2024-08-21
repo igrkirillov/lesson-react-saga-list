@@ -1,8 +1,8 @@
 import { put, takeLatest, call } from 'redux-saga/effects'
-import {searchError, searchFulfilled, searchRequest} from "../../store/actions";
-import {fetchItems} from "../../serverApi";
+import {searchError, searchFulfilled, searchRequest} from "../store/actions";
+import {fetchItems} from "../serverApi";
 import {PayloadAction} from "@reduxjs/toolkit";
-import {Item} from "../../types";
+import {Item} from "../types";
 
 export function* workerSearchRequest(action: PayloadAction<string>) {
     try {
